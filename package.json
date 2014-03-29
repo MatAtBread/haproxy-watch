@@ -22,7 +22,6 @@
     "url": "https://github.com/MatAtBread/haproxy-watch/issues"
   },
   "dependencies": {
-    "nodemailer": "~0.6.1",
-    "nodent": "~0.1.24"
+    "nodemailer": "~0.6.1"
   }
 }
