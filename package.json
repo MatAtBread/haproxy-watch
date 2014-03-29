@@ -1,0 +1,27 @@
+{
+  "name": "haproxy-watch",
+  "version": "0.0.0",
+  "description": "A simple Node based app to watch HAProxy's stats page and email you when things go wrong.",
+  "main": "hwatch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MatAtBread/haproxy-watch.git"
+  },
+  "keywords": [
+    "haproxy",
+    "monitor",
+    "email",
+    "alerts"
+  ],
+  "author": "MatAtBread",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MatAtBread/haproxy-watch/issues"
+  },
+  "dependencies": {
+    "nodemailer": "~0.6.1"
+  }
+}
