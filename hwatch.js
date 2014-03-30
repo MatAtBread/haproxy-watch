@@ -21,6 +21,8 @@ function poll(config){
 
 	var mail = nodemailer.createTransport.apply(this,config.mail) ;
 	
+	var servers = {} ;
+	
 	function pollProxy() {
 		var errors = [] ;
 		
@@ -37,8 +39,10 @@ function poll(config){
 			});
 			str.on('end',function(){
 				fromCSV(body).forEach(function(s){
-					if (s.status=="DOWN") {
-						report(s['# pxname']+" "+s.svname+" DOWN") ;
+					var server = s['# pxname']+" "+s.svname ;
+					if (servers[server] != s.status) {
+						report(s['# pxname']+" "+s.svname+": "+s.status) ;
+						servers[server] = s.status ;
 					}
 				}) ;
 				if (errors.length) {
